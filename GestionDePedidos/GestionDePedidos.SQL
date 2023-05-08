@@ -118,3 +118,126 @@ GO
 EXECUTE DBO.AlterPRODUCTOSPEDIDOSnDos
 GO
 
+
+CREATE PROCEDURE DataCLIENTES
+AS
+BEGIN
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('1','BELTRAN E HIJOS','LAS FUENTES 78','MADRID','(914) 45- 64- 35','ANGEL MARTINEZ','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('2','LA MODERNA','LA PALOMA 123','OVIEDO','(985) 32- 34- 34','JUAN GARCIA','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('3','EL ESPANOLITO','MOTORES 34','BARCELONA','(934) 56- 53- 43','ANA FERNANDEZ','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('4','EXPORTASA','VALLECAS 34','MADRID','(913) 45- 23- 78','ELVIRA GOMEZ','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('6','CONFECCIONES AMPARO','LOS MOROS 23','GIJON','(985) 75- 43- 32','LUIS ALVAREZ','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('7','LA CASA DEL JUGUETE','AMERICA 45','MADRID','(912) 64- 99- 87','ELIAS PEREZ','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('8','JUGUETERIA SUAREZ','PARIS 123','BARCELONA','(933) 45- 78- 66','JUAN GARCIA','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('9','ALMACEN POPULAR','LAS FUENTES 124','BILBAO','(942) 34- 71- 27','JOSE ALVAREZ','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('10','FERETERIA EL CLAVO','PASEO DE ALAMOS 78','MADRID','(914) 35- 48- 66','MANUEL MENENDEZ','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('11','JUGUETES MARTINEZ','VIA LAYETANA 245','BARCELONA','(936) 62- 85- 54','FRANCISCO CUEVAS','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('12','FERNANDEZ SL','PASEO DEL MAR 45','SANTANDER','(942) 04- 95- 86','ELISA COLLADO','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('13','CONFECCIONES ARTIMEZ','GENERAL PERON 45','A CORUNA','(981) 34- 52- 39','ESTEBAN PASCUAL','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('14','DEPORTES GARCIA','GUZMAN EL BUENO 45','MADRID','(913) 29- 94- 75','ANA JIMENEZ','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('15','EXCLUSIVAS FERNANDEZ','LLOBREGAT 250','BARCELONA','(939) 55- 83- 65','LUISA FERNANDEZ','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('16','DEPORTES MORAN','AUTONOMIA 45','LUGO','(982) 98- 69- 44','JOSE MANZANO','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('17','BAZAR FRANCISCO','CARMEN 45','ZAMORA','(980) 49- 52- 88','CARLOS BELTRAN','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('18','JUGUETES LA SONRISA','LA BAÑEZA 67','LEON','(987) 94- 53- 68','FAUSTINO PEREZ','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('19','CONFECCIONES GALAN','FUENCARRAL 78','MADRID','(913) 85- 92- 34','JUAN GARCÍA','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('20','LA CURTIDORA','OLIVARES 3','MALAGA','(953) 75- 62- 59','MARIA GOMEZ','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('21','LINEA JOVEN','SIERPES 78','SEVILLA','(953) 45- 25- 67','ASUNCIÓN SALADO','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('22','BAZAR EL BARAT','DIAGONAL 56','BARCELONA','(936) 69- 28- 66','ELISA DAPENA','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('23','EL PALACIO DE LA MODA','ORTEGA Y GASSET 129','MADRID','(927) 78- 52- 35','LAURA CARRASCO','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('24','SAEZ Y CIA','INFANTA MERCEDS 23','SEVILLA','(954) 86- 92- 34','MANUEL GUERRA','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('25','DEPORTES EL MADRILENO','CASTILLA 345','ZARAGOZA','(976) 38- 89- 34','CARLOS GONZALEZ','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('26','FERRETERIA LA ESCOBA','ORENSE 7','MADRID','(918) 45- 93- 46','JOSE GARCIA','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('27','JUGUETES EL BARATO','VIA AUGUSTA 245','BARCELONA','(933) 48- 69- 84','ELVIRA IGLESIAS','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('28','CONFECCIONES HERMINIA','CORRIDA 345','GIJON','(985) 59- 73- 15','ABEL GONZALEZ','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('30','BAZAR EL ARGENTINO','ATOCHA 55','MADRID','(912) 49- 59- 73','ADRIAN ÁLVAREZ','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('31','LA TIENDA ELEGANTE','EL COMENDADOR 67','ZARAGOZA','(975) 69- 40- 35','JOSE PASCUAL','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('32','DEPORTES NAUTICOS GARCIA','JUAN FERNANDEZ 89','AVILA','(920) 26- 86- 48','JUAN CONRADO','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('33','CONFECCIONES RUIZ','LLOBREGAT 345','BARCELONA','(934) 58- 76- 15','CARLOS SANZ','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('34','BAZAR LA FARAONA','CASTILLA Y LEoN 34','MADRID','(915) 48- 36- 27','ANGEL SANTAMARIA','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('35','FERRETERIA EL MARTILLO','CASTELLANOS 205','SALAMANCA','(923) 54- 89- 65','JOAQUIN FERNANDEZ','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('36','JUGUETES EDUCATIVOS SANZ','ORENSE 89','MADRID','(916) 87- 23- 54','PEDRO IGLESIAS','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('37','ALMACENES FERNANDEZ','ANTON 67','TERUEL','(978) 56- 40- 25','MARIA ARDANZA','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('38','CONFECCIONES MONICA','MOTORES 67','BARCELONA','(935) 68- 12- 45','PEDRO SERRANO','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('39','FERRETERIA LIMA','VALLECAS 45','MADRID','(913) 53- 27- 85','LUIS GARCIA','N/A');
+INSERT INTO CLIENTES (CodCliente,Empresa,Direccion,Poblacion,Telefono,Responsable,Historial)
+VALUES
+('40','DEPORTES EL BRASILENO','ABEL MARTINEZ 67','SALAMANCA','(921) 54- 87- 62','CARLOS GOMEZ','N/A');
+END 
+GO
+EXECUTE DBO.DataCLIENTES
+GO
+
