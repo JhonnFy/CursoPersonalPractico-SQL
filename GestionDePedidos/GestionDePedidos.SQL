@@ -1,4 +1,3 @@
-
 CREATE DATABASE GestionDePedidos
 GO
 
@@ -20,7 +19,8 @@ DROP PROCEDURE IF EXISTS
 [AlterPEDIDOS],
 [AlterPRODUCTOSPEDIDOSnUno],
 [AlterPRODUCTOSPEDIDOSnDos],
-[DataCLIENTES];
+[DataCLIENTES],
+[DataPEDIDOS];
 GO
 
 CREATE PROCEDURE TablaCLIENTES
@@ -48,7 +48,7 @@ NumeroDePedido INT PRIMARY KEY NOT NULL,
 FKPED_CodCLIENTE INT NOT NULL,
 FechaDePedido DATE NOT NULL,
 FormaDePago VARCHAR(50) NOT NULL,
-Descuento FLOAT NOT NULL,
+Descuento VARCHAR(50) NOT NULL,
 Enviado VARCHAR(50) NOT NULL,
 )
 END
@@ -117,7 +117,6 @@ END
 GO
 EXECUTE DBO.AlterPRODUCTOSPEDIDOSnDos
 GO
-
 
 CREATE PROCEDURE DataCLIENTES
 AS
@@ -241,3 +240,163 @@ GO
 EXECUTE DBO.DataCLIENTES
 GO
 
+CREATE PROCEDURE DataPEDIDOS
+AS
+BEGIN
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('1','1','2000-03-11','CONTADO','2,00%','VERDADERO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('3','23','2000-03-18','APLAZADO','6,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('5','25','2000-03-31','CONTADO','9,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('7','12','2000-04-12','CONTADO','7,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('8','1','2000-04-15','TARJETA','2,00%','VERDADERO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('9','21','2000-04-21','CONTADO','4,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('13','13','2000-04-30','APLAZADO','3,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('22','7','2000-05-31','TARJETA','5,00%','VERDADERO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('25','18','2000-06-02','CONTADO','6,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('27','34','2000-06-06','CONTADO','4,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('31','30','2000-06-08','TARJETA','5,00%','VERDADERO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('28','28','2000-06-08','APLAZADO','8,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('47','34','2000-07-31','APLAZADO','8,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('30','2','2000-8-15','CONTADO','6,00%','VERDADERO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('63','28','2000-9-10','CONTADO','9,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('77','1','2000-10-28','CONTADO','5,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('79','34','2000-12-12','CONTADO','5,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('105','30','2001-1-1','APLAZADO','9,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('102','6','2001-1-12','CONTADO','7,00%','VERDADERO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('103','2','2001-1-24','CONTADO','4,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('29','30','2001-04-02','TARJETA','6,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('11','4','2001-5-1','CONTADO','8,00%','VERDADERO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('16','25','2001-5-11','CONTADO','12,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('12','6','2001-5-19','CONTADO','9,00%','VERDADERO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('21','16','2001-5-28','CONTADO','3,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('32','14','2001-6-4','APLAZADO','7,00%','VERDADERO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('35','26','2001-6-30','CONTADO','6,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('37','24','2001-7-2','TARJETA','3,00%','VERDADERO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('39','20','2001-7-8','TARJETA','6,00%','VERDADERO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('43','9','2001-7-18','CONTADO','7,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('73','1','2001-8-2','CONTADO','7,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('86','9','2001-12-24','APLAZADO','3,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('98','1','2001-12-27','CONTADO','8,00%','VERDADERO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('5050','30','2002-5-22','TARJETA','0,00%','VERDADERO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('19','10','2002-5-22','CONTADO','7,00%','VERDADERO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('34','26','2002-6-23','TARJETA','5,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('40','4','2002-7-12','CONTADO','12,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('42','34','2002-7-15','APLAZADO','7,00%','VERDADERO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('44','34','2002-7-20','APLAZADO','4,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('45','30','2002-7-22','TARJETA','7,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('46','31','2002-7-25','CONTADO','6,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('5005','30','2002-8-10','TARJETA','0,00%','VERDADERO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('72','1','2002-8-18','CONTADO','5,00%','VERDADERO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('48','18','2002-8-30','CONTADO','3,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('49','28','2002-9-2','CONTADO','3,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('50','9','2002-9-5','APLAZADO','8,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('51','9','2002-9-5','CONTADO','5,00%','VERDADERO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('74','1','2002-9-17','APLAZADO','8,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('75','1','2002-9-30','TARJETA','12,00%','FALSO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('76','1','2002-10-19','CONTADO','4,00%','VERDADERO');
+INSERT INTO PEDIDOS (NumeroDePedido,FKPED_CodCLIENTE,FechaDePedido,FormaDePago,Descuento,Enviado)
+VALUES
+('85','4','2002-12-23','TARJETA','4,00%','FALSO');
+END
+GO
+EXECUTE DBO.DataPEDIDOS
+GO
