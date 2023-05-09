@@ -20,7 +20,8 @@ DROP PROCEDURE IF EXISTS
 [AlterPRODUCTOSPEDIDOSnUno],
 [AlterPRODUCTOSPEDIDOSnDos],
 [DataCLIENTES],
-[DataPEDIDOS];
+[DataPEDIDOS],
+[DataPRODUCTOS];
 GO
 
 CREATE PROCEDURE TablaCLIENTES
@@ -399,4 +400,132 @@ VALUES
 END
 GO
 EXECUTE DBO.DataPEDIDOS
+GO
+
+CREATE PROCEDURE DataPRODUCTOS
+AS
+BEGIN
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('1','FERRETERIA','DESTORNILLADOR',7,'2020-10-22','FALSO','ESPANA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('2','CONFECCION','TRAJE CABALLERO',285,'2002-3-11','VERDADERO','USA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('3','JUGUETERIA','COCHE TELEDIRIGIDO',159,'2002-5-26','VERDADERO','MARRUECOS','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('4','DEPORTES','RAQUETA TENIS',93,'2000-3-20','VERDADERO','USA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('6','DEPORTES','MANCUERNAS',60,'2000-9-13','VERDADERO','USA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('7','CONFECCION','SERRUCHO',30,'2001-3-23','VERDADERO','FRANCIA','N/A')
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('8','JUGUETERIA','CORREPASILLOS',103,'2000-4-11','VERDADERO','JAPON','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('9','CONFECCION','PANTALON SENORA',174,'2000-1-10','VERDADERO','MARRUECOS','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('10','JUGUETERIA','CONSOLA VIDEO',443,'2002-9-24','VERDADERO','USA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('11','CERAMICA','TUBOS',168,'2000-2-4','VERDADERO','CHINA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('12','FERRETERIA','LLAVE INGLESA',24,'2001-5-23','VERDADERO','USA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('13','CONFECCION','CAMISA CABALLERO',67,'2002-8-11','FALSO','ESPANA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('14','JUGUETERIA','TREN ELECTRICO', 1.50,'2001-7-3','VERDADERO','JAPON','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('15','CERAMICA','PLATO DECORATIVO',54,'2000-6-7','VERDADERO','CHINA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('16','FERRETERIA','ALICATES',7,'2000-4-7','VERDADERO','ITALIA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('17','JUGUETERIA','MUNECA ANDADORA',105,'2001-1-4','FALSO','ESPANA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('18','DEPORTES','PISTOLA OLIMPICA',47,'2001-02-02','VERDADERO','SUECIA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('19','CONFECCION','BLUSA SRA',101,'2000-3-18','VERDADERO','CHINA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('20','CERAMICA','JUEGO DE TE',43,'2001-1-15','VERDADERO','CHINA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('21','CERAMICA','CENICERO',20,'2001-7-2','VERDADERO','JAPON','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('22','FERRETERIA','MARTILLO',11,'2001-9-4','FALSO','ESPANA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('23','CONFECCION','CAZADORA PIEL',523,'2001-7-10','VERDADERO','ITALIA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('24','DEPORTES','BALON RUGBY',112,'2000-11-11','VERDADERO','USA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('25','DEPORTES','BALON BALONCESTO',75,'2001-6-25','VERDADERO','JAPON','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('26','JUGUETERIA','FUERTE DE SOLDADOS',144,'2000-11-25','VERDADERO','JAPON','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('27','CONFECCION','ABRIGO CABALLERO',500.000,'2002-04-05','VERDADERO','ITALIA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('28','DEPORTES','BALÓN FUTBOL',44,'2002-7-4','FALSO','ESPANA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('29','CONFECCION','ABRIGO SRA',360,'2001-5-3','VERDADERO','MARRUECOS','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('30','FERRETERIA','DESTORNILLADOR',9,'2002-2-20','VERDADERO','FRANCIA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('31','JUGUETERIA','PISTOLA CON SONIDOS',57,'2001-4-15','FALSO','ESPANA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('32','DEPORTES','CRONOMETRO',439,'2002-1-3','VERDADERO','USA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('33','CERAMICA','MACETA',29,'2000-2-23','FALSO','ESPANA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('34','OFICINA','PIE DE LAMPARA',40,'2001-5-27','VERDADERO','TURQUIA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('35','FERRETERIA','LIMA GRANDE',22,'2008-8-10','FALSO','ESPANA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('36','FERRETERIA','JUEGO DE BROCAS',15,'2002-7-4','VERDADERO','TAIWAN','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('37','CONFECCION','CINTURON DE PIEL',4,'2002-5-14','FALSO','ESPANA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('38','DEPORTES','CANA DE PESCA',270,'2000-2-14','VERDADERO','USA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('39','CERAMICA','JARRA CHINA',128,'2002-9-2','VERDADERO','CHINA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('40','DEPORTES','BOTA ALPINISMO',144,'2002-5-5','FALSO','ESPANA','N/A');
+INSERT INTO PRODUCTOS (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('41','DEPORTES','PALAS DE PING PONG',22,'2002-2-2','FALSO','ESPANA','N/A');
+END
+GO
+EXECUTE DBO.DataPRODUCTOS
 GO
