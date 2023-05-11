@@ -71,3 +71,47 @@ GO
 --Realizar una consulta que muestre todos los campos de la tabla “Clientes”. Ordenar los resultados por el campo “Población” ascendentemente.
 SELECT * FROM CLIENTES C ORDER BY C.Poblacion ASC
 GO
+
+
+
+
+--¿Cuantos SKU, existen por seccion?
+SELECT P.Seccion, COUNT(P.CodArticulo) AS Existentes FROM PRODUCTOS P GROUP BY P.Seccion ORDER BY P.Seccion ASC 
+GO
+--¿Media del precio SKU, por seccion?
+SELECT P.Seccion, ROUND(AVG(P.Precio),2) AS Media FROM PRODUCTOS P GROUP BY P.Seccion ORDER BY P.Seccion ASC, Media ASC
+GO
+--¿Cuantos clientes, existen por pais?
+SELECT C.Poblacion, COUNT(C.CodCliente) AS Numero FROM CLIENTES C GROUP BY C.Poblacion ORDER BY C.Poblacion ASC, Numero ASC
+GO
+--¿Cuantos SKU, por Origen?
+SELECT P.PaisDeOrigen, COUNT(P.CodArticulo) AS Numero FROM PRODUCTOS P GROUP BY P.PaisDeOrigen ORDER BY P.PaisDeOrigen ASC, Numero ASC
+GO
+--¿Valor neto Precio-SKU, por seccion?
+SELECT P.Seccion, SUM(P.Precio) AS Neto FROM PRODUCTOS P GROUP BY P.Seccion ORDER BY Neto 
+GO
+--Media del Precio-SKU. Secciones Deportes & Ceramica
+SELECT P.Seccion, ROUND(AVG(P.Precio),2) Media FROM PRODUCTOS P GROUP BY P.Seccion HAVING P.Seccion = 'DEPORTES' OR P.Seccion = 'CERAMICA'
+GO
+--Precio del SKU mas caro, de la seccion: Confeccion
+SELECT P.Seccion, MAX(P.Precio) MaximoValor FROM PRODUCTOS P WHERE P.Seccion = 'CONFECCION' GROUP BY P.Seccion
+GO
+/*Realizar una consulta sobre la tabla “Clientes”  que muestre los campos “Dirección”, “Teléfono” y “Población”. 
+Este último debe aparecer en la consulta con el nombre de “Residencia”. 
+Los registros aparecerán ordenados descendentemente por el campo “Población”.*/
+SELECT C.Direccion, C.Telefono, C.Poblacion AS Residencia FROM CLIENTES C ORDER BY C.Poblacion DESC
+GO
+--Realizar una consulta que muestre que poblaciones hay en la tabla “Clientes”.
+SELECT C.Poblacion FROM CLIENTES C GROUP BY C.Poblacion
+GO
+/*Realizar una consulta de agrupación que muestre la media del precio de los artículos de todas las secciones. 
+Mostrar en la consulta los campos sección y suma por sección.*/
+SELECT P.Seccion, AVG(P.Precio) AS SumaPorSeccion FROM PRODUCTOS P GROUP BY P.Seccion
+GO
+/*Realizar una consulta de agrupación que muestre la media del precio de todas las secciones menos de juguetería.
+En la consulta deberán aparecer los campos “Sección” y “Media por sección”.*/
+SELECT P.Seccion, AVG(P.Precio) AS MediaPorSeccion FROM PRODUCTOS P WHERE P.Seccion <> 'JUGUETERIA' GROUP BY P.Seccion
+GO
+--Realizar Una consulta que muestre cuantos artículos hay de la sección “Deportes”.
+SELECT P.Seccion, COUNT(P.CodArticulo) AS TotalSKU FROM PRODUCTOS P GROUP BY P.Seccion HAVING P.Seccion = 'DEPORTES'
+GO
