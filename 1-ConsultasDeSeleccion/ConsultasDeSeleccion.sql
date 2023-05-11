@@ -154,3 +154,6 @@ El nuevo campo debe aparecer en Euros y con 2 lugares decimales.*/
 --PRECIO_AUMENTADO_EN_2
 SELECT P.NombreArticulo, P.Seccion, P.Precio AS ValorInicial, ROUND((P.Precio + (P.Precio*2)/100),2) PRECIO_AUMENTADO_EN_2 FROM PRODUCTOS P WHERE P.Seccion = 'FERRETERIA'
 GO
+
+
+
