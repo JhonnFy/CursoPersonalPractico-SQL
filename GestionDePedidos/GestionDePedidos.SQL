@@ -8,13 +8,15 @@ DROP TABLE IF EXISTS
 [CLIENTES],
 [PEDIDOS],
 [PRODUCTOSPEDIDOS],
-[PRODUCTOS];
+[PRODUCTOS],
+[PRODUCTOSNro2];
 GO
 
 DROP PROCEDURE IF EXISTS 
 [TablaCLIENTES],
 [TablaPEDIDOS],
 [TablaProductosPedidos],
+[TablaPRODUCTOSNro2],
 [TablaPRODUCTOS],
 [AlterPEDIDOS],
 [AlterPRODUCTOSPEDIDOSnUno],
@@ -22,7 +24,8 @@ DROP PROCEDURE IF EXISTS
 [DataCLIENTES],
 [DataPEDIDOS],
 [DataPRODUCTOS],
-[DataProductosPedidos];
+[DataProductosPedidos],
+[DataPRODUCTOSNro2];
 GO
 
 CREATE PROCEDURE TablaCLIENTES
@@ -89,6 +92,24 @@ GO
 EXECUTE DBO.TablaPRODUCTOS
 GO
 
+CREATE PROCEDURE TablaPRODUCTOSNro2
+AS
+BEGIN
+CREATE TABLE PRODUCTOSNro2(
+CodArticulo INT PRIMARY KEY NOT NULL,
+Seccion VARCHAR(50) NOT NULL,
+NombreArticulo VARCHAR(50) NOT NULL,
+Precio FLOAT NOT NULL,
+Fecha DATE NOT NULL,
+Importado VARCHAR(50) NOT NULL,
+PaisDeOrigen VARCHAR(50) NOT NULL,
+Foto IMAGE NOT NULL,
+)
+END
+GO
+EXECUTE DBO.TablaPRODUCTOSNro2
+GO
+
 CREATE PROCEDURE AlterPEDIDOS
 AS
 BEGIN
@@ -98,7 +119,6 @@ END
 GO
 EXECUTE DBO.AlterPEDIDOS
 GO
-
 
 CREATE PROCEDURE AlterPRODUCTOSPEDIDOSnUno
 AS
@@ -703,3 +723,68 @@ END
 GO
 EXECUTE DBO.DataProductosPedidos
 GO
+
+CREATE PROCEDURE DataPRODUCTOSNro2
+AS BEGIN
+INSERT INTO PRODUCTOSNro2 (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('50','ALTA COSTURA','TRAJE CABALLERO',1.285,'2002-03-11','TRUE','ITALIA','N/A');
+INSERT INTO PRODUCTOSNro2 (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('51','DEPORTES DE RIESGO','RAQUETA TENIS',1.094,'2000-03-20','TRUE','USA','N/A');
+INSERT INTO PRODUCTOSNro2 (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('52','DEPORTES DE RIESGO','MANCUERNAS',1.060,'2000-09-13','TRUE','USA','N/A');
+INSERT INTO PRODUCTOSNro2 (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('53','ALTA COSTURA','SERRUCHO',1.0301,'2001-03-23','TRUE','FRANCIA','N/A');
+INSERT INTO PRODUCTOSNro2 (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('54','ALTA COSTURA','PANTALON SEÑORA',1.175,'2000-01-10','TRUE','MARRUECOS','N/A');
+INSERT INTO PRODUCTOSNro2 (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('55','ALTA COSTURA','CAMISA CABALLERO',1.167,'2002-08-11','TRUE','ESPANA','N/A');
+INSERT INTO PRODUCTOSNro2 (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('56','DEPORTES DE RIESGO','PISTOLA OLIMPICA',1.146,'2001-02-02','TRUE','SUECIA','N/A');
+INSERT INTO PRODUCTOSNro2 (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('57','ALTA COSTURA','BLUSA SRA',1.102,'2000-03-18','TRUE','CHINA','N/A');
+INSERT INTO PRODUCTOSNro2 (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('58','ALTA COSTURA','CAZADORA PIEL',1.523,'2001-07-10','TRUE','ITALIA','N/A');
+INSERT INTO PRODUCTOSNro2 (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('59','DEPORTES DE RIESGO','BALON RUGBY',1.200,'2000-11-11','TRUE','USA','N/A');
+INSERT INTO PRODUCTOSNro2 (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('60','DEPORTES DE RIESGO','BALON BALONCESTO',1.176,'2001-06-25','TRUE','JAPON','N/A');
+INSERT INTO PRODUCTOSNro2 (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('61','ALTA COSTURA','ABRIGO CABALLERO',1.500,'2002-04-05','TRUE','ITALIA','N/A');
+INSERT INTO PRODUCTOSNro2 (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('62','DEPORTES DE RIESGO','BALON FUTBOL',1.143,'2002-07-04','FALSE','ESPANA','N/A');
+INSERT INTO PRODUCTOSNro2 (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('63','ALTA COSTURA','ABRIGO SRA',1.370,'2001-05-03','TRUE','MARRUECOS','N/A');
+INSERT INTO PRODUCTOSNro2 (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('64','DEPORTES DE RIESGO','CRONOMETRO',1.440,'2002-01-03','TRUE','USA','N/A');
+INSERT INTO PRODUCTOSNro2 (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('65','ALTA COSTURA','CINTURON DE PIEL',1.100,'2002-05-12','FALSE','ESPANA','N/A');
+INSERT INTO PRODUCTOSNro2 (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('66','DEPORTES DE RIESGO','CANA DE PESCA',1.270,'2000-02-14','TRUE','USA','N/A');
+INSERT INTO PRODUCTOSNro2 (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('67','DEPORTES DE RIESGO','BOTA ALPINISMO',1.145,'2002-05-05','FALSE','ESPANA','N/A');
+INSERT INTO PRODUCTOSNro2 (CodArticulo,Seccion,NombreArticulo,Precio,Fecha,Importado,PaisDeOrigen,Foto)
+VALUES
+('68','DEPORTES DE RIESGO','PALAS DE PING PONG',1.021,'2002-02-02','FALSE','ESPANA','N/A');
+END
+GO
+EXECUTE DBO.DataPRODUCTOSNro2
+GO
+
