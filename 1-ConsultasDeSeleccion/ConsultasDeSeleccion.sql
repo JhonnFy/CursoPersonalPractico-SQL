@@ -117,3 +117,40 @@ GO
 --Realizar Una consulta que muestre cuantos artículos hay de la sección “Deportes”.
 SELECT P.Seccion, COUNT(P.CodArticulo) AS TotalSKU FROM PRODUCTOS P GROUP BY P.Seccion HAVING P.Seccion = 'DEPORTES'
 GO
+
+
+
+
+--Precio-SKU incluido impuesto IVA del 20%
+SELECT P.CodArticulo, P.Seccion, P.NombreArticulo, P.Precio, (P.Precio*20/100) AS IVA, ROUND(P.Precio + (P.Precio*20/100),2) AS ValorNeto, P.Fecha, P.Importado, P.PaisDeOrigen, P.Foto FROM PRODUCTOS P
+GO
+--En un campo nuevo, imprimir el descuento del 3%, en todos los SKU
+SELECT P.CodArticulo, P.Seccion, P.NombreArticulo, P.Precio, (P.Precio*3)/100 AS Descuento, P.Precio - (P.Precio*3)/100 AS ValorNeto, P.Fecha, P.Importado, P.PaisDeOrigen, P.Foto FROM PRODUCTOS P 
+GO
+--En un campo nuevo, imprimir el descuento del 3Euros, en todos los SKU
+SELECT P.CodArticulo, P.Seccion, P.NombreArticulo, P.Precio AS ValorActual, (P.Precio-3) AS ValorNeto, P.Fecha, P.Importado, P.PaisDeOrigen, P.Foto FROM PRODUCTOS P
+GO
+--¿Diferencia en años, entre la fecha actual, y la del SKU? 
+SELECT P.CodArticulo, P.Seccion, P.NombreArticulo, P.Precio, P.Fecha, P.Importado, P.PaisDeOrigen, P.Foto, (YEAR(GETDATE())-YEAR(P.Fecha)) AS AñosDeDiferencia FROM  PRODUCTOS P WHERE P.Seccion = 'DEPORTES' ORDER BY P.Fecha ASC
+GO
+--¿Diferencia en  días, entre la fecha actual, y la del SKU? 
+SELECT P.CodArticulo,P.Seccion,P.NombreArticulo,P.Precio,P.Fecha,P.Importado,P.PaisDeOrigen,P.Foto, DATEDIFF(DAY, DAY(GETDATE()), P.Fecha) AS DiasDeDiferencia FROM  PRODUCTOS P
+GO
+/*Realizar una consulta que visualice los campos NOMBRE ARTÍCULO, SECCIÓN, PRECIO de la tabla PRODUCTOS y un campo nuevo que nombramos con el texto “DESCUENTO_7”. 
+Debe mostrar el resultado de aplicar sobre el campo PRECIO un descuento de un 7 %. El formato del nuevo campo para debe aparecer con 2 lugares decimales.*/
+SELECT P.NombreArticulo, P.Seccion, P.Precio, ROUND((P.Precio-(P.Precio*7)/100),2) AS DESCUENTO_7 FROM PRODUCTOS P
+GO
+/*Realizar una consulta visualizando los campos FECHA, SECCIÓN, NOMBRE ARTÍCULO y PRECIO de la tabla PRODUCTOS 
+y un campo nuevo que nombramos con el texto “DTO2 €_EN_CERÁMICA”. 
+Debe mostrar el resultado de aplicar sobre el campo PRECIO la resta de 2 € sólo a los artículos de la sección CERÁMICA. 
+El formato del nuevo campo debe aparecer con 2 lugares decimales. Ordenar el resultado de la consulta por el campo FECHA descendente.*/
+SELECT P.Fecha, P.Seccion, P.NombreArticulo, P.Precio, CASE WHEN P.Seccion <> 'CERAMICA' THEN  '0' ELSE ROUND((P.Precio -2),2) END AS DTO2_EN_CERAMICA FROM PRODUCTOS P ORDER BY P.Seccion, P.Fecha DESC
+GO
+SELECT P.Fecha, P.Seccion, P.NombreArticulo, P.Precio, ROUND((P.Precio-2),2) AS DTO2_EN_CERAMICA FROM PRODUCTOS P WHERE P.Seccion = 'CERAMICA' ORDER BY P.Fecha DESC
+GO
+/*Realizar una consulta visualizando los campos NOMBRE ARTÍCULO, SECCIÓN, PRECIO de la tabla PRODUCTOS y un campo nuevo que nombramos con el texto “PRECIO_AUMENTADO_EN_2”. 
+Debe mostrar el PRECIO con un incremento de un 2% del PRECIO. Sólo debemos tener en cuenta los registros de la sección FERRETERÍA. 
+El nuevo campo debe aparecer en Euros y con 2 lugares decimales.*/
+--PRECIO_AUMENTADO_EN_2
+SELECT P.NombreArticulo, P.Seccion, P.Precio AS ValorInicial, ROUND((P.Precio + (P.Precio*2)/100),2) PRECIO_AUMENTADO_EN_2 FROM PRODUCTOS P WHERE P.Seccion = 'FERRETERIA'
+GO
