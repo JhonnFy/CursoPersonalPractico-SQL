@@ -154,17 +154,3 @@ El nuevo campo debe aparecer en Euros y con 2 lugares decimales.*/
 --PRECIO_AUMENTADO_EN_2
 SELECT P.NombreArticulo, P.Seccion, P.Precio AS ValorInicial, ROUND((P.Precio + (P.Precio*2)/100),2) PRECIO_AUMENTADO_EN_2 FROM PRODUCTOS P WHERE P.Seccion = 'FERRETERIA'
 GO
-
-
-
-
---(UNION) Todos los sku que pertenecen a DEPORTES & DEPORTES DE RIESGO
-SELECT * FROM PRODUCTOS P WHERE P.Seccion = 'DEPORTES' UNION ALL SELECT * FROM PRODUCTOSNro2 R WHERE R.Seccion = 'DEPORTES DE RIESGO'
-GO
---(UNION) Todos los SKU, cuyo PRECIO>500E & Todos los SKU cuya seccion es: ALTA COSTURA	
-SELECT * FROM PRODUCTOS P WHERE P.Precio >=500 UNION ALL SELECT * FROM PRODUCTOSNro2 R WHERE R.Seccion = 'ALTA COSTURA'
-GO
-
-
-
-
