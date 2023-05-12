@@ -157,3 +157,18 @@ GO
 
 
 
+
+--MULTITABLA 
+--SKU de las secciones DEPORTES & DEPORTES DE RIESGO
+SELECT * FROM PRODUCTOS P WHERE P.Seccion = 'DEPORTES' UNION ALL SELECT * FROM PRODUCTOSNro2 R WHERE R.Seccion = 'DEPORTES DE RIESGO' ORDER BY P.PaisDeOrigen ASC
+GO
+--SKU cuyo precio es >500 & Seccion SKU es ALTA COSTURA
+SELECT * FROM PRODUCTOS P WHERE P.Precio >500 UNION ALL SELECT * FROM PRODUCTOSNro2 R WHERE R.Seccion = 'ALTA COSTURA' ORDER BY P.Seccion ASC
+GO
+--¿Que clientes realizaron pedidos en marzo del 2000?
+SELECT * FROM PEDIDOS P INNER JOIN CLIENTES C ON P.FKPED_CodCLIENTE = C.CodCliente WHERE P.FechaDePedido BETWEEN '2000-03-01' AND '2000-03-31' ORDER BY P.FechaDePedido ASC
+GO
+--Clientes de Madrid. Imprimir(NumeroDePedido,Empresa,Poblacion,Enviado)
+SELECT P.NumeroDePedido, C.Empresa, C.Poblacion, P.Enviado FROM PEDIDOS P INNER JOIN CLIENTES C ON P.FKPED_CodCLIENTE = C.CodCliente WHERE C.Poblacion = 'MADRID'
+ORDER BY P.Enviado ASC
+GO
