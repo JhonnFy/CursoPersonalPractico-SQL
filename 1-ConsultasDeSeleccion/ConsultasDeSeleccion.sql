@@ -172,3 +172,56 @@ GO
 SELECT P.NumeroDePedido, C.Empresa, C.Poblacion, P.Enviado FROM PEDIDOS P INNER JOIN CLIENTES C ON P.FKPED_CodCLIENTE = C.CodCliente WHERE C.Poblacion = 'MADRID'
 ORDER BY P.Enviado ASC
 GO
+
+
+
+
+--Todos los Pedidos(NroPedido,CodCliente,FormaDePago) que han realizado los clientes(CodCliente,) de Madrid
+SELECT P.NumeroDePedido, P.FKPED_CodCLIENTE, P.FormaDePago, C.CodCliente FROM PEDIDOS P
+INNER JOIN CLIENTES C
+ON P.FKPED_CodCLIENTE = C.CodCliente
+WHERE C.Poblacion = 'MADRID'
+GO
+--¿Clientes de Madrid que no han realizado pedidos?
+SELECT * FROM CLIENTES C
+LEFT JOIN PEDIDOS P
+ON C.CodCliente = P.FKPED_CodCLIENTE
+WHERE C.Poblacion = 'MADRID' AND P.NumeroDePedido IS NULL
+GO
+
+
+
+
+--Consulta que nos devuleva el nombre y la seccion de los Precios-SKU, que sean superior a la media
+SELECT A.NombreArticulo, A.Seccion, A.Precio FROM PRODUCTOS A WHERE A.Precio > (SELECT AVG(B.Precio) FROM PRODUCTOS B) ORDER BY A.Seccion ASC
+GO
+--SKU cuyo valor es mayor que todos los SKU de CERAMICA
+SELECT * FROM PRODUCTOS A WHERE A.Precio > ALL (SELECT B.Precio FROM PRODUCTOS B WHERE B.Seccion = 'CERAMICA') ORDER BY A.Seccion ASC
+GO
+--SKU cuyo precio sea mayor a los precios de los SKU de JUGUETERIA
+SELECT * FROM PRODUCTOS A WHERE A.Precio > ALL (SELECT B.Precio FROM PRODUCTOS B WHERE B.Seccion = 'JUGUETERIA') ORDER BY A.Seccion ASC
+GO
+
+
+
+
+--IN NOT IN
+--Nombre y precio de los SKU que se han pedido con mas de 20 unidades
+SELECT B.NombreArticulo, B.Precio, A.Unidades FROM PRODUCTOSPEDIDOS A
+INNER JOIN PRODUCTOS B
+ON A.FKPP_CodARTICULO = B.CodArticulo
+WHERE A.Unidades IN (SELECT B.Unidades FROM PRODUCTOSPEDIDOS B WHERE B.Unidades > '20') ORDER BY A.Unidades ASC
+GO
+--Clientes que no han pagado con tarjeta
+SELECT * FROM PEDIDOS A
+INNER JOIN CLIENTES B
+ON A.FKPED_CodCLIENTE = B.CodCliente 
+WHERE A.FormaDePago IN
+(SELECT C.FormaDePago FROM PEDIDOS C WHERE C.FormaDePago <> 'TARJETA') ORDER BY A.FormaDePago ASC
+GO
+--Clientes que no solicitaron pedidos
+SELECT * FROM CLIENTES C  WHERE C.CodCliente NOT IN
+(SELECT B.CodCliente FROM PEDIDOS A INNER JOIN CLIENTES B  ON A.FKPED_CodCLIENTE = B.CodCliente)
+
+
+
