@@ -222,6 +222,3 @@ GO
 --Clientes que no solicitaron pedidos
 SELECT * FROM CLIENTES C  WHERE C.CodCliente NOT IN
 (SELECT B.CodCliente FROM PEDIDOS A INNER JOIN CLIENTES B  ON A.FKPED_CodCLIENTE = B.CodCliente)
-
-
-
