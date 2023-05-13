@@ -186,3 +186,44 @@ UPDATE PRODUCTOS
 SET Precio = 60100
 WHERE CodArticulo = '34' AND Seccion = 'OFICINA'
 GO
+
+
+
+
+--Incrementar el precio de TODOS los SKU con un contador de 1 para cada unidad (SKU1 Inicia en 70100).Seccion:ALTA COSTURA
+UPDATE PRODUCTOSNro2
+SET Precio = 70100
+WHERE CodArticulo = '50' AND Seccion = 'ALTA COSTURA'
+GO
+UPDATE PRODUCTOSNro2
+SET Precio = 70101
+WHERE CodArticulo = '53' AND Seccion = 'ALTA COSTURA'
+GO
+UPDATE PRODUCTOSNro2
+SET Precio = 70102
+WHERE CodArticulo = '54' AND Seccion = 'ALTA COSTURA'
+GO
+UPDATE PRODUCTOSNro2
+SET Precio = 70103
+WHERE CodArticulo = '55' AND Seccion = 'ALTA COSTURA' 
+GO
+UPDATE PRODUCTOSNro2
+SET Precio = 70104
+WHERE CodArticulo = '57' AND Seccion = 'ALTA COSTURA'
+GO
+UPDATE PRODUCTOSNro2
+SET Precio = 70105
+WHERE CodArticulo = '58' AND Seccion = 'ALTA COSTURA'
+GO
+UPDATE PRODUCTOSNro2
+SET Precio = 70106
+WHERE CodArticulo = '61' AND Seccion = 'ALTA COSTURA'
+GO
+UPDATE PRODUCTOSNro2
+SET Precio = 70107
+WHERE CodArticulo = '63' AND Seccion = 'ALTA COSTURA'
+GO
+UPDATE PRODUCTOSNro2
+SET Precio = 70108
+WHERE CodArticulo = '65' AND Seccion = 'ALTA COSTURA'
+GO
