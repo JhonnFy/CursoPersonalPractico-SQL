@@ -279,3 +279,23 @@ GO
 
 
 
+
+/*Realizar una consulta de acción de creación de tabla a partir de la tabla CLIENTES, utilizando todos los campos de la tabla, 
+pero únicamente los registros que sean de la población Madrid. El nuevo objeto lo nombramos con el texto “CLIENTES_DE_MADRID”.*/
+SELECT * INTO ClientesDeMadrid FROM CLIENTES C WHERE C.Poblacion = 'MADRID'
+GO
+/*Realizar una consulta de acción de creación de tabla a partir de la tabla PRODUCTOS, utilizando todos los campos de la tabla, 
+pero sólo los registros que sean de la sección DEPORTES. El nuevo objeto – tabla lo nombramos con el texto “ARTÍCULOS_DE_DEPORTES”.*/
+SELECT * INTO ArticulosDeDeportes FROM PRODUCTOS P WHERE P.Seccion = 'DEPORTES'
+GO
+/*Realizar una consulta de acción de creación de tabla a partir de la tabla PEDIDOS, utilizando todos los campos de la tabla, 
+pero sólo los registros que tengan registrada la forma de pago TARJETA. 
+El nuevo objeto – tabla lo nombramos con el texto “PEDIDOS_PAGADOS_CON_TARJETA”. Ejecutamos la consulta.*/
+SELECT * INTO PedidosPagadosConTarjeta FROM PEDIDOS P WHERE P.FormaDePago = 'TARJETA'
+GO
+/*Realizar una consulta que actualice los precios de la tabla ARTÍCULOS DE DEPORTE. 
+La actualización consiste en calcular el IVA (21%) y mostrar en ese campo como resultado el precio con el IVA incluido.*/
+UPDATE PRODUCTOS
+SET Precio = Precio + (Precio*21/100)
+WHERE Seccion = 'DEPORTES'
+GO
