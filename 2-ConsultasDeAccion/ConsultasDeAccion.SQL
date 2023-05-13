@@ -1,0 +1,164 @@
+
+USE GestionDePedidos
+GO
+
+--Incrementar el precio de TODOS los SKU con un contador de 100 pora cada unidad. Seccion DEPORTES
+UPDATE PRODUCTOS
+SET Precio = '100'
+WHERE CodArticulo = '1'
+GO
+UPDATE PRODUCTOS
+SET Precio = '200'
+WHERE CodArticulo = '2'
+GO
+UPDATE PRODUCTOS
+SET Precio = '300'
+WHERE CodArticulo = '3'
+UPDATE PRODUCTOS
+SET Precio = '400'
+WHERE CodArticulo = '4'
+GO
+UPDATE PRODUCTOS
+SET Precio = '500'
+WHERE CodArticulo = '6'
+GO
+UPDATE PRODUCTOS
+SET Precio = '600'
+WHERE CodArticulo = '7'
+GO
+UPDATE PRODUCTOS
+SET Precio = '700'
+WHERE CodArticulo = '8'
+GO
+UPDATE PRODUCTOS
+SET Precio = '800'
+WHERE CodArticulo = '9'
+GO
+UPDATE PRODUCTOS
+SET Precio = '900'
+WHERE CodArticulo = '10'
+GO
+UPDATE PRODUCTOS
+SET Precio = '1000'
+WHERE CodArticulo = '11'
+GO
+UPDATE PRODUCTOS
+SET Precio = '1100'
+WHERE CodArticulo = '12'
+GO
+UPDATE PRODUCTOS
+SET Precio = '1200'
+WHERE CodArticulo = '13'
+GO
+UPDATE PRODUCTOS
+SET Precio = '1300'
+WHERE CodArticulo = '14'
+GO
+UPDATE PRODUCTOS
+SET Precio = '1400'
+WHERE CodArticulo = '15'
+GO
+UPDATE PRODUCTOS
+SET Precio = '1500'
+WHERE CodArticulo = '16'
+GO
+UPDATE PRODUCTOS
+SET Precio = '1600'
+WHERE CodArticulo = '17'
+GO
+UPDATE PRODUCTOS
+SET Precio = '1700'
+WHERE CodArticulo = '18'
+GO
+UPDATE PRODUCTOS
+SET Precio = '1800'
+WHERE CodArticulo = '19'
+GO
+UPDATE PRODUCTOS
+SET Precio = '1900'
+WHERE CodArticulo = '20'
+GO
+UPDATE PRODUCTOS
+SET Precio = '2000'
+WHERE CodArticulo = '21'
+GO
+UPDATE PRODUCTOS
+SET Precio = '2100'
+WHERE CodArticulo = '22'
+GO
+UPDATE PRODUCTOS
+SET Precio = '2200'
+WHERE CodArticulo = '23'
+GO
+UPDATE PRODUCTOS
+SET Precio = '2300'
+WHERE CodArticulo = '24'
+GO
+UPDATE PRODUCTOS
+SET Precio = '2400'
+WHERE CodArticulo = '25'
+GO
+UPDATE PRODUCTOS
+SET Precio = '2500'
+WHERE CodArticulo = '26'
+GO
+UPDATE PRODUCTOS
+SET Precio = '2600'
+WHERE CodArticulo = '27'
+GO
+UPDATE PRODUCTOS
+SET Precio = '2700'
+WHERE CodArticulo = '28'
+GO
+UPDATE PRODUCTOS
+SET Precio = '2800'
+WHERE CodArticulo = '29'
+GO
+UPDATE PRODUCTOS
+SET Precio = '2900'
+WHERE CodArticulo = '30'
+GO
+UPDATE PRODUCTOS
+SET Precio = '3000'
+WHERE CodArticulo = '31'
+GO
+UPDATE PRODUCTOS
+SET Precio = '3100'
+WHERE CodArticulo = '32'
+GO
+UPDATE PRODUCTOS
+SET Precio = '3200'
+WHERE CodArticulo = '33'
+GO
+UPDATE PRODUCTOS
+SET Precio = '3300'
+WHERE CodArticulo = '34'
+GO
+UPDATE PRODUCTOS
+SET Precio = '3400'
+WHERE CodArticulo = '35'
+GO
+UPDATE PRODUCTOS
+SET Precio = '3500'
+WHERE CodArticulo = '36'
+GO
+UPDATE PRODUCTOS
+SET Precio = '3600'
+WHERE CodArticulo = '37'
+GO
+UPDATE PRODUCTOS
+SET Precio = '3700'
+WHERE CodArticulo = '38'
+GO
+UPDATE PRODUCTOS
+SET Precio = '3800'
+WHERE CodArticulo = '39'
+GO
+UPDATE PRODUCTOS
+SET Precio = '3900'
+WHERE CodArticulo = '40'
+GO
+UPDATE PRODUCTOS
+SET Precio = '4000'
+WHERE CodArticulo = '41'
+GO
