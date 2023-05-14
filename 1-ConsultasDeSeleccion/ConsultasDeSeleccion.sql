@@ -1,10 +1,3 @@
-
-USE GestionDePedidos
-GO
-
-
-
-
 --Todos los clientes de Madrid
 SELECT * FROM CLIENTES C WHERE C.Poblacion = 'MADRID'
 GO
