@@ -299,3 +299,32 @@ UPDATE PRODUCTOS
 SET Precio = Precio + (Precio*21/100)
 WHERE Seccion = 'DEPORTES'
 GO
+
+
+
+
+--Eliminar los SKU cuyo descuento sea del 0.00%.Tabla:PedidosPagadosConTarjeta
+DELETE FROM PedidosPagadosConTarjeta WHERE Descuento = '0,00%'
+GO
+--Eliminar los SKU cuyo descuento sea mayor que 2%, & menor de 6%.Tabla:PedidosPagadosConTarjeta
+DELETE FROM PedidosPagadosConTarjeta WHERE Descuento >= '2,00%' AND Descuento <= '5,00%'
+GO
+--Eliminar los SKU cuyo estado de envio sea FLASO
+DELETE FROM PedidosPagadosConTarjeta WHERE Enviado = 'FALSO'
+GO
+
+
+
+
+--Consultar los clientes que han realizado pedidos, sin repetir. 
+SELECT DISTINCT Empresa FROM  CLIENTES C 
+INNER JOIN PEDIDOS P
+ON C.CodCliente = P.FKPED_CodCLIENTE
+GO
+
+
+
+
+--Insertar un cliente desde otra tabla
+INSERT INTO CLIENTES 
+SELECT * FROM ClientesDeMadrid WHERE CodCliente = '50'
