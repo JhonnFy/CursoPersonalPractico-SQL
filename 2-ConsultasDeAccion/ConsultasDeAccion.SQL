@@ -25,8 +25,6 @@ WHERE CodArticulo = '39' AND Seccion = 'CERAMICA'
 GO
 
 
-
-
 --Incrementar el precio de TODOS los SKU con un contador de 1 para cada unidad (SKU1 Inicia en 20100).Seccion:CONFECCION
 UPDATE PRODUCTOS
 SET Precio = 20100
@@ -64,8 +62,6 @@ UPDATE PRODUCTOS
 SET Precio = 20108
 WHERE CodArticulo = '37' AND Seccion = 'CONFECCION'
 GO
-
-
 
 
 --Incrementar el precio de TODOS los SKU con un contador de 1 para cada unidad (SKU1 Inicia en 30100).Seccion:DEPORTES
@@ -111,8 +107,6 @@ WHERE CodArticulo = '41' AND Seccion = 'DEPORTES'
 GO
 
 
-
-
 --Incrementar el precio de TODOS los SKU con un contador de 1 para cada unidad (SKU1 Inicia en 40100).Seccion:FERRETERIA
 UPDATE PRODUCTOS
 SET Precio = 40100
@@ -142,8 +136,6 @@ UPDATE PRODUCTOS
 SET Precio = 40106
 WHERE CodArticulo = '36' AND Seccion = 'FERRETERIA'
 GO
-
-
 
 
 --Incrementar el precio de TODOS los SKU con un contador de 1 para cada unidad (SKU1 Inicia en 50100).Seccion:JUGUETERIA
@@ -179,15 +171,11 @@ WHERE CodArticulo = '31' AND Seccion = 'JUGUETERIA'
 GO
 
 
-
-
 --Incrementar el precio de TODOS los SKU con un contador de 1 para cada unidad (SKU1 Inicia en 60100).Seccion:OFICINA
 UPDATE PRODUCTOS
 SET Precio = 60100
 WHERE CodArticulo = '34' AND Seccion = 'OFICINA'
 GO
-
-
 
 
 --Incrementar el precio de TODOS los SKU con un contador de 1 para cada unidad (SKU1 Inicia en 70100).Seccion:ALTA COSTURA
@@ -227,8 +215,6 @@ UPDATE PRODUCTOSNro2
 SET Precio = 70108
 WHERE CodArticulo = '65' AND Seccion = 'ALTA COSTURA'
 GO
-
-
 
 
 --Incrementar el precio de TODOS los SKU con un contador de 1 para cada unidad (SKU1 Inicia en 80100).Seccion:DEPORTES DE RIESGO
@@ -278,8 +264,6 @@ WHERE CodArticulo = '68' AND Seccion = 'DEPORTES DE RIESGO'
 GO
 
 
-
-
 /*Realizar una consulta de acción de creación de tabla a partir de la tabla CLIENTES, utilizando todos los campos de la tabla, 
 pero únicamente los registros que sean de la población Madrid. El nuevo objeto lo nombramos con el texto “CLIENTES_DE_MADRID”.*/
 SELECT * INTO ClientesDeMadrid FROM CLIENTES C WHERE C.Poblacion = 'MADRID'
@@ -302,7 +286,6 @@ GO
 
 
 
-
 --Eliminar los SKU cuyo descuento sea del 0.00%.Tabla:PedidosPagadosConTarjeta
 DELETE FROM PedidosPagadosConTarjeta WHERE Descuento = '0,00%'
 GO
@@ -314,15 +297,11 @@ DELETE FROM PedidosPagadosConTarjeta WHERE Enviado = 'FALSO'
 GO
 
 
-
-
 --Consultar los clientes que han realizado pedidos, sin repetir. 
 SELECT DISTINCT Empresa FROM  CLIENTES C 
 INNER JOIN PEDIDOS P
 ON C.CodCliente = P.FKPED_CodCLIENTE
 GO
-
-
 
 
 --Insertar un cliente desde otra tabla
