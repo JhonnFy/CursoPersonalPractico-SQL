@@ -1,0 +1,19 @@
+--Consulta Nombre,Sku,Precio
+SELECT * FROM
+(SELECT NombreArticulo, Seccion, Precio FROM PRODUCTOS) AS A
+PIVOT (
+	AVG(A.PRECIO)
+	FOR SECCION IN(
+	[CERAMICA],
+	[CONFECCION],
+	[DEPORTES],
+	[FERRETERIA],
+	[JUGUETERIA],
+	[OFICINA]
+	)
+)AS B
+GO
+
+
+
+
