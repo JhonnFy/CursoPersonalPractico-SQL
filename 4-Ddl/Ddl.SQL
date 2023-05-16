@@ -39,4 +39,3 @@ GO
 --Consultar
 SELECT * FROM PRUEBAS
 GO
-
