@@ -13,7 +13,3 @@ PIVOT (
 	)
 )AS B
 GO
-
-
-
-
